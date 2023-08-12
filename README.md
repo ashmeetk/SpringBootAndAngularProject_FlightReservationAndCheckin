@@ -1,5 +1,6 @@
 # SpringBootAndAngularProject_FlightReservationAndCheckin
 Flight Reservation and CheckIn Project created using SpringBoot and additional CheckIn project created using Angular.
+Made with help of Udemy course: Project Development Using Spring Boot by Bharath Thippireddy.
 
 # SpringBoot Applications:
 Two microservices flightreservation and flightcheckin communicate with each other using Integration layer. FLightCheckIn app uses ReservationRestClientImpl class to converse with ReservationRestController class of FlightReservation app. FlightCheckIn app needs id from flightreservation as well as wants to update number of bags in flight reservation for which it uses Integration Layer and REST protocols. 
@@ -11,7 +12,7 @@ Two microservices flightreservation and flightcheckin communicate with each othe
    -From all flights, select any 1 flight to register the user as passenger n make flight reservation. Enter all reservation details, click on submit to submit reservation.
 
 
-ReservationPDFGeneration: Once reservation is made in flightreservation, a reservation pdf will be generated for it on path: /Users/I534875/Documents/SpringFramework_In_Easy_Steps/FlightReservation/pdf_itineraries_of_reservations/reservation as specified in application.properties. When user submits a reservation, bookFlight method of ReservationServiceImpl class is invoked which saves the pdf at given path using PDFGenerator.java.
+ReservationPDFGeneration in Utility layer: Once reservation is made in flightreservation, a reservation pdf will be generated for it on path: /Users/I534875/Documents/SpringFramework_In_Easy_Steps/FlightReservation/pdf_itineraries_of_reservations/reservation as specified in application.properties. When user submits a reservation, bookFlight method of ReservationServiceImpl class is invoked which saves the pdf at given path using PDFGenerator.java.
 
 # 2. Flight Checkin: (runs on port 9090)
    -Click flightcheckin and run as SpringBoot App and enter http://localhost:8080/flightcheckin/ in browser to land on home page of app.
@@ -30,7 +31,14 @@ To generate flights data: Either copy paste all data present in AddFlights.sql o
 
 
 # Technology used:
-Used sping mvc to create web projects flightreservation n flightcheckin apps. 
-Used spring data jpa to bind database tables with java entity objects. 
-flightreservation and flightcheckin communicate with each other using Integration layer and REST protocols as stated above.
+-Used sping mvc to create web projects flightreservation n flightcheckin apps. 
+-Used spring data jpa to bind database tables with java entity objects. 
+-flightreservation and flightcheckin communicate with each other using Integration layer and REST protocols as stated above.
+-We did not implement spring security in this app.
+-We have enabled logging throughout the application and set the root level to info in the flightreservation->src/main/resources->logback.xml. Refer this logback.xml for all logging configuration. In case if it slows the application, remove it. You can also use commented code in application.properties for login.
+-All the controllers can be referred to flightreservation app flow, starting from UserController where home page url request mapping is specified.
+-index.html serves as our home page for springboot apps.
+-CorsConfig is configured to allow all incoming requests from angular client.
+-Various jsps are served to render all springBoot UI.
+
 
