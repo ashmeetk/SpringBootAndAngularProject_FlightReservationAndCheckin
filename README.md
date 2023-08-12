@@ -28,15 +28,12 @@ Instead of using springboot flightcheckin app, we can also use angular flightche
    -After downloading flightCheckIn, run 'npm i' to create node_modules and package-lock.json file. Then enter 'ng serve -o' to start app on http://localhost:4200<br/>
    -Click on start, then enter registration id for which checkin needs to be performed. Enter number of bags and click ChekcIn to submit reservation<br/>
 
-
-
-
 # Technology used:
 -Used sping mvc to create web projects flightreservation n flightcheckin apps. <br/>
 -Used spring data jpa to bind database tables with java entity objects. <br/>
 -flightreservation and flightcheckin communicate with each other using Integration layer and REST protocols as stated above.<br/>
 -We did not implement spring security in this app.<br/>
--We have enabled logging throughout the application and set the root level to info in the flightreservation->src/main/resources->logback.xml. Refer this logback.xml for all logging configuration. In case if it slows the application, remove it. You can also use commented code in application.properties for login.<br/>
+-To enable logging, place logback.xml(Present under Logging folder) under src/main/resources section.We have set the root level to info in the logback.xml. Refer this logback.xml for all logging configuration. In case if this slows the application, remove logback.xml. You can also use commented code in application.properties to enable logging.<br/>
 -All the controllers can be referred to flightreservation app flow, starting from UserController where home page url request mapping is specified.<br/>
 -index.html serves as our home page for springboot apps.<br/>
 -CorsConfig is configured to allow all incoming requests from angular client.<br/>
