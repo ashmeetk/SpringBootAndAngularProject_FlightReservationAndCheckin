@@ -6,7 +6,7 @@ Made with help of Udemy course: Project Development Using Spring Boot by Bharath
 Two microservices flightreservation and flightcheckin communicate with each other using Integration layer. FLightCheckIn app uses ReservationRestClientImpl class to converse with ReservationRestController class of FlightReservation app. FlightCheckIn app needs id from flightreservation as well as wants to update number of bags in flight reservation for which it uses Integration Layer and REST protocols. 
 
 # 1. Flight Reservation: (runs on port 8080)
-   -Click flightreservation and run as SpringBoot App and enter http://localhost:8080/flightreservation/ in browser to land on home page of app.
+   -Click flightreservation and run as SpringBoot App and enter http://localhost:8080/flightreservation/ in browser to land on home page of app.<br/>
    -1st, register a user using register button. After registering, login with same user
    -Enter the flight departure city, arrival city and date of departure from the data populated in flight table.(Refer table section Or enter From: AUS, To: NYC, Date: 02-05-2018)
    -From all flights, select any 1 flight to register the user as passenger n make flight reservation. Enter all reservation details, click on submit to submit reservation.
