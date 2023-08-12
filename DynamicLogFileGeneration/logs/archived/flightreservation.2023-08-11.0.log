@@ -1,0 +1,788 @@
+2023-08-11 00:58:52 - Starting FlightreservationApplication using Java 17.0.7 with PID 48562 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 00:58:52 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 00:58:52 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-11 00:58:52 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-11 00:58:53 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 00:58:53 - Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+2023-08-11 00:58:53 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 00:58:53 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 00:58:53 - Starting service [Tomcat]
+2023-08-11 00:58:53 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 00:58:53 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 00:58:53 - Initializing Spring embedded WebApplicationContext
+2023-08-11 00:58:53 - Root WebApplicationContext: initialization completed in 623 ms
+2023-08-11 00:58:53 - HikariPool-1 - Starting...
+2023-08-11 00:58:53 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c586a5d
+2023-08-11 00:58:53 - HikariPool-1 - Start completed.
+2023-08-11 00:58:53 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 00:58:53 - HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-11 00:58:53 - HHH000406: Using bytecode reflection optimizer
+2023-08-11 00:58:53 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 00:58:53 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 00:58:54 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 00:58:54 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 00:58:54 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 00:58:54 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-08-11 00:58:54 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 00:58:54 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 00:58:54 - LiveReload server is running on port 35729
+2023-08-11 00:58:54 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-11 00:58:54 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 00:58:54 - Started FlightreservationApplication in 1.925 seconds (process running for 2.72)
+2023-08-11 00:59:05 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-11 00:59:05 - Initializing Servlet 'dispatcherServlet'
+2023-08-11 00:59:05 - Completed initialization in 1 ms
+2023-08-11 00:59:06 - inside showRegistrationPage()
+2023-08-11 00:59:17 - inside register()User [id=null, firstName=Jasleen, lastName=Kaur, email=ashmeetkb13@gmail.com, password=test]
+2023-08-11 00:59:17 - SQL Error: 1062, SQLState: 23000
+2023-08-11 00:59:17 - Duplicate entry 'ashmeetkb13@gmail.com' for key 'user.email'
+2023-08-11 00:59:17 - Servlet.service() for servlet [dispatcherServlet] in context with path [/flightreservation] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Duplicate entry 'ashmeetkb13@gmail.com' for key 'user.email'] [insert into user (email,first_name,last_name,password) values (?,?,?,?)]; SQL [insert into user (email,first_name,last_name,password) values (?,?,?,?)]; constraint [user.email]] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'ashmeetkb13@gmail.com' for key 'user.email'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:275)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performInsert(GetGeneratedKeysDelegate.java:107)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.execute(MutationExecutorPostInsertSingleTable.java:101)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:170)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:112)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2756)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:674)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:363)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:277)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:180)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:140)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:755)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:739)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:360)
+	at jdk.proxy4/jdk.proxy4.$Proxy108.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy4/jdk.proxy4.$Proxy108.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:617)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:244)
+	at jdk.proxy4/jdk.proxy4.$Proxy120.save(Unknown Source)
+	at com.ashmeet.flightreservation.controllers.UserController.register(UserController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:547)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-08-11 00:59:32 - inside register()User [id=null, firstName=Jasleen, lastName=Kaur, email=d@gmail.com, password=d@gmail.com]
+2023-08-11 00:59:56 - inside login() and the email is: d@gmail.com
+2023-08-11 01:00:10 - inside findFlights() From: AUSTo: Departure Date: Mon Feb 05 00:00:00 IST 2018
+2023-08-11 01:00:10 - Flights found are: [Flight [id=1, flightNumber=AA1, operatingAirlines=American Airlines, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 03:14:07.0], Flight [id=2, flightNumber=AA2, operatingAirlines=American Airlines, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 05:14:07.0], Flight [id=3, flightNumber=AA3, operatingAirlines=American Airlines, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 06:14:07.0], Flight [id=4, flightNumber=SW1, operatingAirlines=South West, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 07:14:07.0]]
+2023-08-11 01:05:58 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-11 01:05:59 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:05:59 - Failed to unlock acceptor for [http-nio-8080] because the local address was not available
+2023-08-11 01:05:59 - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:376)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:399)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:521)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:128)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-08-11 01:05:59 - Stopping service [Tomcat]
+2023-08-11 01:05:59 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-11 01:05:59 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:05:59 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:05:59 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:05:59 - HikariPool-1 - Shutdown initiated...
+2023-08-11 01:05:59 - HikariPool-1 - Shutdown completed.
+2023-08-11 01:05:59 - Starting FlightreservationApplication using Java 17.0.7 with PID 48562 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 01:05:59 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 01:05:59 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 01:05:59 - Finished Spring Data repository scanning in 6 ms. Found 4 JPA repository interfaces.
+2023-08-11 01:05:59 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 01:05:59 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:05:59 - Starting service [Tomcat]
+2023-08-11 01:05:59 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 01:05:59 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 01:05:59 - Initializing Spring embedded WebApplicationContext
+2023-08-11 01:05:59 - Root WebApplicationContext: initialization completed in 151 ms
+2023-08-11 01:05:59 - HikariPool-2 - Starting...
+2023-08-11 01:05:59 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ca70b7e
+2023-08-11 01:05:59 - HikariPool-2 - Start completed.
+2023-08-11 01:05:59 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 01:05:59 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:05:59 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 01:05:59 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:05:59 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 01:05:59 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:05:59 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 01:05:59 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 01:05:59 - LiveReload server is running on port 35729
+2023-08-11 01:05:59 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:05:59 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 01:05:59 - Started FlightreservationApplication in 0.362 seconds (process running for 427.549)
+2023-08-11 01:05:59 - Condition evaluation unchanged
+2023-08-11 01:06:20 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-11 01:06:21 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:06:21 - Stopping service [Tomcat]
+2023-08-11 01:06:21 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:06:21 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:06:21 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:06:21 - HikariPool-2 - Shutdown initiated...
+2023-08-11 01:06:21 - HikariPool-2 - Shutdown completed.
+2023-08-11 01:06:21 - Starting FlightreservationApplication using Java 17.0.7 with PID 48562 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 01:06:21 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 01:06:21 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 01:06:21 - Finished Spring Data repository scanning in 5 ms. Found 4 JPA repository interfaces.
+2023-08-11 01:06:21 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 01:06:21 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:06:21 - Starting service [Tomcat]
+2023-08-11 01:06:21 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 01:06:21 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 01:06:21 - Initializing Spring embedded WebApplicationContext
+2023-08-11 01:06:21 - Root WebApplicationContext: initialization completed in 126 ms
+2023-08-11 01:06:21 - HikariPool-3 - Starting...
+2023-08-11 01:06:21 - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@779e515
+2023-08-11 01:06:21 - HikariPool-3 - Start completed.
+2023-08-11 01:06:21 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 01:06:21 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:06:21 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 01:06:21 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:06:21 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 01:06:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:06:21 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 01:06:21 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 01:06:21 - LiveReload server is running on port 35729
+2023-08-11 01:06:21 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:06:21 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 01:06:21 - Started FlightreservationApplication in 0.31 seconds (process running for 449.601)
+2023-08-11 01:06:21 - Condition evaluation unchanged
+2023-08-11 01:12:22 - HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1m742ms).
+2023-08-11 01:15:06 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-11 01:15:07 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:15:07 - Stopping service [Tomcat]
+2023-08-11 01:15:07 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:15:07 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:15:07 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:15:07 - HikariPool-3 - Shutdown initiated...
+2023-08-11 01:15:07 - HikariPool-3 - Shutdown completed.
+2023-08-11 01:15:08 - Starting FlightreservationApplication using Java 17.0.7 with PID 48562 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 01:15:08 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 01:15:08 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 01:15:08 - Finished Spring Data repository scanning in 5 ms. Found 4 JPA repository interfaces.
+2023-08-11 01:15:08 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 01:15:08 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:15:08 - Starting service [Tomcat]
+2023-08-11 01:15:08 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 01:15:08 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 01:15:08 - Initializing Spring embedded WebApplicationContext
+2023-08-11 01:15:08 - Root WebApplicationContext: initialization completed in 146 ms
+2023-08-11 01:15:08 - HikariPool-4 - Starting...
+2023-08-11 01:15:08 - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d90c5be
+2023-08-11 01:15:08 - HikariPool-4 - Start completed.
+2023-08-11 01:15:08 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 01:15:08 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:15:08 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 01:15:08 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:15:08 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 01:15:08 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:15:08 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 01:15:08 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 01:15:08 - LiveReload server is running on port 35729
+2023-08-11 01:15:08 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:15:08 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 01:15:08 - Started FlightreservationApplication in 0.361 seconds (process running for 945.687)
+2023-08-11 01:15:08 - Condition evaluation unchanged
+2023-08-11 01:16:29 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-11 01:16:30 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:16:30 - Stopping service [Tomcat]
+2023-08-11 01:16:30 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:16:30 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:16:30 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:16:30 - HikariPool-4 - Shutdown initiated...
+2023-08-11 01:16:30 - HikariPool-4 - Shutdown completed.
+2023-08-11 01:16:30 - Starting FlightreservationApplication using Java 17.0.7 with PID 48562 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 01:16:30 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 01:16:30 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 01:16:30 - Finished Spring Data repository scanning in 7 ms. Found 4 JPA repository interfaces.
+2023-08-11 01:16:31 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 01:16:31 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:16:31 - Starting service [Tomcat]
+2023-08-11 01:16:31 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 01:16:31 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 01:16:31 - Initializing Spring embedded WebApplicationContext
+2023-08-11 01:16:31 - Root WebApplicationContext: initialization completed in 130 ms
+2023-08-11 01:16:31 - HikariPool-5 - Starting...
+2023-08-11 01:16:31 - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78db4f60
+2023-08-11 01:16:31 - HikariPool-5 - Start completed.
+2023-08-11 01:16:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 01:16:31 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:16:31 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 01:16:31 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:16:31 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 01:16:31 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:16:31 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 01:16:31 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 01:16:31 - LiveReload server is running on port 35729
+2023-08-11 01:16:31 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:16:31 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 01:16:31 - Started FlightreservationApplication in 0.31 seconds (process running for 1028.513)
+2023-08-11 01:16:31 - Condition evaluation unchanged
+2023-08-11 01:18:53 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-11 01:18:53 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:18:53 - Stopping service [Tomcat]
+2023-08-11 01:18:53 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:18:53 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:18:53 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:18:53 - HikariPool-5 - Shutdown initiated...
+2023-08-11 01:18:53 - HikariPool-5 - Shutdown completed.
+2023-08-11 01:18:53 - Starting FlightreservationApplication using Java 17.0.7 with PID 48562 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 01:18:53 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 01:18:53 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 01:18:53 - Finished Spring Data repository scanning in 5 ms. Found 4 JPA repository interfaces.
+2023-08-11 01:18:53 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 01:18:53 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:18:53 - Starting service [Tomcat]
+2023-08-11 01:18:53 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 01:18:53 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 01:18:53 - Initializing Spring embedded WebApplicationContext
+2023-08-11 01:18:53 - Root WebApplicationContext: initialization completed in 116 ms
+2023-08-11 01:18:53 - HikariPool-6 - Starting...
+2023-08-11 01:18:53 - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4792c0dd
+2023-08-11 01:18:53 - HikariPool-6 - Start completed.
+2023-08-11 01:18:53 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 01:18:53 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:18:53 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 01:18:53 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:18:53 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 01:18:53 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:18:53 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 01:18:53 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 01:18:53 - LiveReload server is running on port 35729
+2023-08-11 01:18:53 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:18:53 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 01:18:53 - Started FlightreservationApplication in 0.289 seconds (process running for 1171.193)
+2023-08-11 01:18:53 - Condition evaluation unchanged
+2023-08-11 01:19:24 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-11 01:19:25 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:19:25 - Stopping service [Tomcat]
+2023-08-11 01:19:25 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:19:25 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:19:25 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:19:25 - HikariPool-6 - Shutdown initiated...
+2023-08-11 01:19:25 - HikariPool-6 - Shutdown completed.
+2023-08-11 01:19:25 - Starting FlightreservationApplication using Java 17.0.7 with PID 48562 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 01:19:25 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 01:19:25 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 01:19:25 - Finished Spring Data repository scanning in 5 ms. Found 4 JPA repository interfaces.
+2023-08-11 01:19:25 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 01:19:25 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:19:25 - Starting service [Tomcat]
+2023-08-11 01:19:25 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 01:19:25 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 01:19:25 - Initializing Spring embedded WebApplicationContext
+2023-08-11 01:19:25 - Root WebApplicationContext: initialization completed in 126 ms
+2023-08-11 01:19:25 - HikariPool-7 - Starting...
+2023-08-11 01:19:25 - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a73c17c
+2023-08-11 01:19:25 - HikariPool-7 - Start completed.
+2023-08-11 01:19:25 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 01:19:25 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:19:25 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 01:19:25 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:19:25 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 01:19:25 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:19:26 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 01:19:26 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 01:19:26 - LiveReload server is running on port 35729
+2023-08-11 01:19:26 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:19:26 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 01:19:26 - Started FlightreservationApplication in 0.296 seconds (process running for 1203.377)
+2023-08-11 01:19:26 - Condition evaluation unchanged
+2023-08-11 01:19:54 - Application shutdown requested.
+2023-08-11 01:19:54 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:19:54 - Stopping service [Tomcat]
+2023-08-11 01:19:54 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:19:54 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:19:54 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:19:54 - HikariPool-7 - Shutdown initiated...
+2023-08-11 01:19:54 - HikariPool-7 - Shutdown completed.
+2023-08-11 01:20:20 - Starting FlightreservationApplication using Java 17.0.7 with PID 49025 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 01:20:20 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 01:20:20 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-11 01:20:20 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-11 01:20:20 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 01:20:20 - Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+2023-08-11 01:20:21 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 01:20:21 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:20:21 - Starting service [Tomcat]
+2023-08-11 01:20:21 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 01:20:21 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 01:20:21 - Initializing Spring embedded WebApplicationContext
+2023-08-11 01:20:21 - Root WebApplicationContext: initialization completed in 596 ms
+2023-08-11 01:20:21 - HikariPool-1 - Starting...
+2023-08-11 01:20:21 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30f4585b
+2023-08-11 01:20:21 - HikariPool-1 - Start completed.
+2023-08-11 01:20:21 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 01:20:21 - HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-11 01:20:21 - HHH000406: Using bytecode reflection optimizer
+2023-08-11 01:20:21 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:20:21 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 01:20:21 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:20:21 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 01:20:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:20:21 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-08-11 01:20:22 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 01:20:22 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 01:20:22 - LiveReload server is running on port 35729
+2023-08-11 01:20:22 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:20:22 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 01:20:22 - Started FlightreservationApplication in 1.912 seconds (process running for 2.281)
+2023-08-11 01:20:47 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-11 01:20:47 - Initializing Servlet 'dispatcherServlet'
+2023-08-11 01:20:47 - Completed initialization in 1 ms
+2023-08-11 01:20:47 - inside showCompleteReservation() with flightId: 1
+2023-08-11 01:20:47 - flight is: Flight [id=1, flightNumber=AA1, operatingAirlines=American Airlines, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 03:14:07.0]
+2023-08-11 01:20:53 - inside showCompleteReservation() with flightId: 1
+2023-08-11 01:20:53 - flight is: Flight [id=1, flightNumber=AA1, operatingAirlines=American Airlines, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 03:14:07.0]
+2023-08-11 01:21:01 - inside showLoginPage()
+2023-08-11 01:21:07 - inside login() and the email is: d@gmail.com
+2023-08-11 01:21:15 - inside findFlights() From: AUSTo: Departure Date: Tue Feb 06 00:00:00 IST 2018
+2023-08-11 01:21:15 - Flights found are: [Flight [id=7, flightNumber=SW1, operatingAirlines=South West, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-06, estimatedDepartureTime=2018-02-06 07:14:07.0], Flight [id=8, flightNumber=SW2, operatingAirlines=South West, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-06, estimatedDepartureTime=2018-02-06 08:14:07.0]]
+2023-08-11 01:21:16 - inside showCompleteReservation() with flightId: 7
+2023-08-11 01:21:16 - flight is: Flight [id=7, flightNumber=SW1, operatingAirlines=South West, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-06, estimatedDepartureTime=2018-02-06 07:14:07.0]
+2023-08-11 01:21:33 - inside completeReservation() ReservationRequest [flightId=7, passengerFirstName=d@gmail.com, passengerLastName=d@gmail.com, passengerEmail=d@gmail.com, passengerPhone=d@gmail.com, nameOnTheCard=d@gmail.com, CardNumber=d@gmail.com, expirationDate=d@gmail.com, securityCode=d@gmail.com]
+2023-08-11 01:21:33 - inside bookFlight()
+2023-08-11 01:21:33 - Fetching flight for flight id: 7
+2023-08-11 01:21:33 - Saving the passenger: Passenger [id=null, firstName=d@gmail.com, lastName=d@gmail.com, middleName=null, email=d@gmail.com, phone=d@gmail.com]
+2023-08-11 01:21:33 - Saving the reservation: Reservation [id=null, checkedIn=false, numberOfBags=0, passenger=Passenger [id=10, firstName=d@gmail.com, lastName=d@gmail.com, middleName=null, email=d@gmail.com, phone=d@gmail.com], flight=Flight [id=7, flightNumber=SW1, operatingAirlines=South West, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-06, estimatedDepartureTime=2018-02-06 07:14:07.0]]
+2023-08-11 01:21:33 - Generating the itinerary
+2023-08-11 01:21:33 - inside generateItineary()
+2023-08-11 01:30:16 - Application shutdown requested.
+2023-08-11 01:30:17 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:30:17 - Stopping service [Tomcat]
+2023-08-11 01:30:17 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-11 01:30:17 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:30:17 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:30:17 - HikariPool-1 - Shutdown initiated...
+2023-08-11 01:30:17 - HikariPool-1 - Shutdown completed.
+2023-08-11 01:33:12 - Starting FlightreservationApplication using Java 17.0.7 with PID 49329 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 01:33:12 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 01:33:12 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-11 01:33:12 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-11 01:33:12 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 01:33:12 - Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+2023-08-11 01:33:12 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 01:33:12 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:33:12 - Starting service [Tomcat]
+2023-08-11 01:33:12 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 01:33:13 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 01:33:13 - Initializing Spring embedded WebApplicationContext
+2023-08-11 01:33:13 - Root WebApplicationContext: initialization completed in 607 ms
+2023-08-11 01:33:13 - HikariPool-1 - Starting...
+2023-08-11 01:33:13 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30f4585b
+2023-08-11 01:33:13 - HikariPool-1 - Start completed.
+2023-08-11 01:33:13 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 01:33:13 - HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-11 01:33:13 - HHH000406: Using bytecode reflection optimizer
+2023-08-11 01:33:13 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:33:13 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 01:33:13 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:33:13 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 01:33:13 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:33:13 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-08-11 01:33:14 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 01:33:14 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 01:33:14 - LiveReload server is running on port 35729
+2023-08-11 01:33:14 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:33:14 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 01:33:14 - Started FlightreservationApplication in 1.879 seconds (process running for 2.265)
+2023-08-11 01:33:44 - Application shutdown requested.
+2023-08-11 01:33:44 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:33:44 - Stopping service [Tomcat]
+2023-08-11 01:33:44 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:33:44 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:33:44 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:33:44 - HikariPool-1 - Shutdown initiated...
+2023-08-11 01:33:44 - HikariPool-1 - Shutdown completed.
+2023-08-11 01:33:59 - Starting FlightreservationApplication using Java 17.0.7 with PID 49357 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 01:33:59 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 01:33:59 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-11 01:33:59 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-11 01:33:59 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 01:33:59 - Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+2023-08-11 01:33:59 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 01:33:59 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:33:59 - Starting service [Tomcat]
+2023-08-11 01:33:59 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 01:33:59 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 01:33:59 - Initializing Spring embedded WebApplicationContext
+2023-08-11 01:33:59 - Root WebApplicationContext: initialization completed in 607 ms
+2023-08-11 01:33:59 - HikariPool-1 - Starting...
+2023-08-11 01:33:59 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e233473
+2023-08-11 01:33:59 - HikariPool-1 - Start completed.
+2023-08-11 01:33:59 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 01:33:59 - HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-11 01:33:59 - HHH000406: Using bytecode reflection optimizer
+2023-08-11 01:33:59 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:34:00 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 01:34:00 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:34:00 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 01:34:00 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:34:00 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-08-11 01:34:00 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 01:34:00 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 01:34:00 - LiveReload server is running on port 35729
+2023-08-11 01:34:00 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:34:00 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 01:34:00 - Started FlightreservationApplication in 1.878 seconds (process running for 2.263)
+2023-08-11 01:34:12 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-11 01:34:12 - Initializing Servlet 'dispatcherServlet'
+2023-08-11 01:34:12 - Completed initialization in 1 ms
+2023-08-11 01:34:12 - inside findReservation() for id: 8
+2023-08-11 01:34:17 - inside findReservation() for id: 10
+2023-08-11 01:34:21 - inside updateReservation() for: ReservationUpdateRequest [id=10, checkedIn=true, numberOfBags=4]
+2023-08-11 01:34:21 - Saving Reservation
+2023-08-11 01:39:04 - Application shutdown requested.
+2023-08-11 01:39:04 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:39:04 - Stopping service [Tomcat]
+2023-08-11 01:39:04 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-11 01:39:04 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:39:04 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:39:04 - HikariPool-1 - Shutdown initiated...
+2023-08-11 01:39:04 - HikariPool-1 - Shutdown completed.
+2023-08-11 01:40:25 - Starting FlightreservationApplication using Java 17.0.7 with PID 49540 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 01:40:25 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 01:40:25 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-11 01:40:25 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-11 01:40:25 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 01:40:25 - Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+2023-08-11 01:40:26 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 01:40:26 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:40:26 - Starting service [Tomcat]
+2023-08-11 01:40:26 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 01:40:26 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 01:40:26 - Initializing Spring embedded WebApplicationContext
+2023-08-11 01:40:26 - Root WebApplicationContext: initialization completed in 571 ms
+2023-08-11 01:40:26 - HikariPool-1 - Starting...
+2023-08-11 01:40:26 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49be93ce
+2023-08-11 01:40:26 - HikariPool-1 - Start completed.
+2023-08-11 01:40:26 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 01:40:26 - HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-11 01:40:26 - HHH000406: Using bytecode reflection optimizer
+2023-08-11 01:40:26 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:40:26 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 01:40:26 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:40:26 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 01:40:26 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:40:26 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-08-11 01:40:27 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 01:40:27 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 01:40:27 - LiveReload server is running on port 35729
+2023-08-11 01:40:27 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:40:27 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 01:40:27 - Started FlightreservationApplication in 1.81 seconds (process running for 2.175)
+2023-08-11 01:41:10 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-11 01:41:10 - Initializing Servlet 'dispatcherServlet'
+2023-08-11 01:41:10 - Completed initialization in 1 ms
+2023-08-11 01:41:12 - inside showRegistrationPage()
+2023-08-11 01:41:15 - inside showLoginPage()
+2023-08-11 01:41:22 - inside login() and the email is: d@gmail.com
+2023-08-11 01:41:26 - inside findFlights() From: AUSTo: Departure Date: Mon Feb 05 00:00:00 IST 2018
+2023-08-11 01:41:26 - Flights found are: [Flight [id=1, flightNumber=AA1, operatingAirlines=American Airlines, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 03:14:07.0], Flight [id=2, flightNumber=AA2, operatingAirlines=American Airlines, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 05:14:07.0], Flight [id=3, flightNumber=AA3, operatingAirlines=American Airlines, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 06:14:07.0], Flight [id=4, flightNumber=SW1, operatingAirlines=South West, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 07:14:07.0]]
+2023-08-11 01:41:28 - inside showCompleteReservation() with flightId: 1
+2023-08-11 01:41:28 - flight is: Flight [id=1, flightNumber=AA1, operatingAirlines=American Airlines, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 03:14:07.0]
+2023-08-11 01:41:39 - inside completeReservation() ReservationRequest [flightId=1, passengerFirstName=Jasleen, passengerLastName=Kaur, passengerEmail=batrapritpalsingh@gmail.com, passengerPhone=09540919888, nameOnTheCard=VISA, CardNumber=1, expirationDate=2, securityCode=3]
+2023-08-11 01:41:39 - inside bookFlight()
+2023-08-11 01:41:39 - Fetching flight for flight id: 1
+2023-08-11 01:41:39 - Saving the passenger: Passenger [id=null, firstName=Jasleen, lastName=Kaur, middleName=null, email=batrapritpalsingh@gmail.com, phone=09540919888]
+2023-08-11 01:41:39 - Saving the reservation: Reservation [id=null, checkedIn=false, numberOfBags=0, passenger=Passenger [id=11, firstName=Jasleen, lastName=Kaur, middleName=null, email=batrapritpalsingh@gmail.com, phone=09540919888], flight=Flight [id=1, flightNumber=AA1, operatingAirlines=American Airlines, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 03:14:07.0]]
+2023-08-11 01:41:39 - Generating the itinerary
+2023-08-11 01:41:39 - inside generateItineary()
+2023-08-11 01:43:00 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-11 01:43:00 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:43:00 - Stopping service [Tomcat]
+2023-08-11 01:43:00 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-11 01:43:00 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:43:00 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:43:00 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:43:00 - HikariPool-1 - Shutdown initiated...
+2023-08-11 01:43:00 - HikariPool-1 - Shutdown completed.
+2023-08-11 01:43:00 - Starting FlightreservationApplication using Java 17.0.7 with PID 49540 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 01:43:00 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 01:43:01 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 01:43:01 - Finished Spring Data repository scanning in 6 ms. Found 4 JPA repository interfaces.
+2023-08-11 01:43:01 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 01:43:01 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:43:01 - Starting service [Tomcat]
+2023-08-11 01:43:01 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 01:43:01 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 01:43:01 - Initializing Spring embedded WebApplicationContext
+2023-08-11 01:43:01 - Root WebApplicationContext: initialization completed in 157 ms
+2023-08-11 01:43:01 - HikariPool-2 - Starting...
+2023-08-11 01:43:01 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@318e76fc
+2023-08-11 01:43:01 - HikariPool-2 - Start completed.
+2023-08-11 01:43:01 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 01:43:01 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:43:01 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 01:43:01 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:43:01 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 01:43:01 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:43:01 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 01:43:01 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 01:43:01 - LiveReload server is running on port 35729
+2023-08-11 01:43:01 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 01:43:01 - Started FlightreservationApplication in 0.363 seconds (process running for 156.188)
+2023-08-11 01:43:01 - Condition evaluation unchanged
+2023-08-11 01:43:02 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:43:02 - HikariPool-2 - Shutdown initiated...
+2023-08-11 01:43:02 - HikariPool-2 - Shutdown completed.
+2023-08-11 01:43:11 - Starting FlightreservationApplication using Java 17.0.7 with PID 49592 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 01:43:11 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 01:43:11 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-11 01:43:11 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-11 01:43:12 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 01:43:12 - Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+2023-08-11 01:43:12 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 01:43:12 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:43:12 - Starting service [Tomcat]
+2023-08-11 01:43:12 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 01:43:12 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 01:43:12 - Initializing Spring embedded WebApplicationContext
+2023-08-11 01:43:12 - Root WebApplicationContext: initialization completed in 593 ms
+2023-08-11 01:43:12 - HikariPool-1 - Starting...
+2023-08-11 01:43:12 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29908fe2
+2023-08-11 01:43:12 - HikariPool-1 - Start completed.
+2023-08-11 01:43:12 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 01:43:12 - HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-11 01:43:12 - HHH000406: Using bytecode reflection optimizer
+2023-08-11 01:43:12 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:43:12 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 01:43:12 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 01:43:13 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 01:43:13 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 01:43:13 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-08-11 01:43:13 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-11 01:43:13 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-11 01:43:13 - LiveReload server is running on port 35729
+2023-08-11 01:43:13 - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-11 01:43:13 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-11 01:43:13 - Started FlightreservationApplication in 1.855 seconds (process running for 2.229)
+2023-08-11 01:43:20 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-11 01:43:20 - Initializing Servlet 'dispatcherServlet'
+2023-08-11 01:43:20 - Completed initialization in 2 ms
+2023-08-11 01:43:20 - inside completeReservation() ReservationRequest [flightId=1, passengerFirstName=Jasleen, passengerLastName=Kaur, passengerEmail=batrapritpalsingh@gmail.com, passengerPhone=09540919888, nameOnTheCard=VISA, CardNumber=1, expirationDate=2, securityCode=3]
+2023-08-11 01:43:20 - inside bookFlight()
+2023-08-11 01:43:20 - Fetching flight for flight id: 1
+2023-08-11 01:43:20 - Saving the passenger: Passenger [id=null, firstName=Jasleen, lastName=Kaur, middleName=null, email=batrapritpalsingh@gmail.com, phone=09540919888]
+2023-08-11 01:43:20 - Saving the reservation: Reservation [id=null, checkedIn=false, numberOfBags=0, passenger=Passenger [id=12, firstName=Jasleen, lastName=Kaur, middleName=null, email=batrapritpalsingh@gmail.com, phone=09540919888], flight=Flight [id=1, flightNumber=AA1, operatingAirlines=American Airlines, departureCity=AUS, arrivalCity=NYC, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 03:14:07.0]]
+2023-08-11 01:43:20 - Generating the itinerary
+2023-08-11 01:43:20 - inside generateItineary()
+2023-08-11 03:06:25 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h22m12s315ms).
+2023-08-11 04:13:02 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h6m37s794ms).
+2023-08-11 05:10:33 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57m30s869ms).
+2023-08-11 06:14:50 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h4m16s743ms).
+2023-08-11 07:57:27 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h42m36s550ms).
+2023-08-11 09:04:34 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h7m6s963ms).
+2023-08-11 10:06:56 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h2m22s630ms).
+2023-08-11 10:10:14 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s463ms).
+2023-08-11 10:57:12 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=43m58s49ms).
+2023-08-11 11:17:52 - Restarting due to 23 class path changes (0 additions, 5 deletions, 18 modifications)
+2023-08-11 11:17:52 - Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-11 11:17:52 - Stopping service [Tomcat]
+2023-08-11 11:17:52 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-11 11:17:52 - Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-11 11:17:52 - Destroying ProtocolHandler ["http-nio-8080"]
+2023-08-11 11:17:52 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 11:17:52 - HikariPool-1 - Shutdown initiated...
+2023-08-11 11:17:52 - HikariPool-1 - Shutdown completed.
+2023-08-11 12:31:00 - Starting FlightreservationApplication using Java 17.0.7 with PID 53892 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 12:31:00 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 12:31:00 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-11 12:31:00 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-11 12:31:00 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 12:31:00 - Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+2023-08-11 12:31:01 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 12:31:01 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 12:31:01 - Starting service [Tomcat]
+2023-08-11 12:31:01 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 12:31:01 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 12:31:01 - Initializing Spring embedded WebApplicationContext
+2023-08-11 12:31:01 - Root WebApplicationContext: initialization completed in 635 ms
+2023-08-11 12:31:01 - HikariPool-1 - Starting...
+2023-08-11 12:31:01 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1868297b
+2023-08-11 12:31:01 - HikariPool-1 - Start completed.
+2023-08-11 12:31:01 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 12:31:01 - HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-11 12:31:01 - HHH000406: Using bytecode reflection optimizer
+2023-08-11 12:31:01 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 12:31:01 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 12:31:01 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 12:31:02 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 12:31:02 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 12:31:02 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-08-11 12:31:02 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'encoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-08-11 12:31:02 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 12:31:02 - HikariPool-1 - Shutdown initiated...
+2023-08-11 12:31:02 - HikariPool-1 - Shutdown completed.
+2023-08-11 12:31:02 - Stopping service [Tomcat]
+2023-08-11 12:31:02 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-11 12:31:02 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field encoder in com.ashmeet.flightreservation.controllers.UserController required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2023-08-11 12:32:46 - Starting FlightreservationApplication using Java 17.0.7 with PID 54062 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-11 12:32:46 - No active profile set, falling back to 1 default profile: "default"
+2023-08-11 12:32:46 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-11 12:32:46 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-11 12:32:47 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-11 12:32:47 - Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+2023-08-11 12:32:47 - Tomcat initialized with port(s): 8080 (http)
+2023-08-11 12:32:47 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-11 12:32:47 - Starting service [Tomcat]
+2023-08-11 12:32:47 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-11 12:32:47 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-11 12:32:47 - Initializing Spring embedded WebApplicationContext
+2023-08-11 12:32:47 - Root WebApplicationContext: initialization completed in 637 ms
+2023-08-11 12:32:47 - HikariPool-1 - Starting...
+2023-08-11 12:32:47 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33d2e2f5
+2023-08-11 12:32:47 - HikariPool-1 - Start completed.
+2023-08-11 12:32:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-11 12:32:47 - HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-11 12:32:47 - HHH000406: Using bytecode reflection optimizer
+2023-08-11 12:32:47 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 12:32:47 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-11 12:32:47 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-11 12:32:48 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-11 12:32:48 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 12:32:48 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-08-11 12:32:48 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'encoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-08-11 12:32:48 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-11 12:32:48 - HikariPool-1 - Shutdown initiated...
+2023-08-11 12:32:48 - HikariPool-1 - Shutdown completed.
+2023-08-11 12:32:48 - Stopping service [Tomcat]
+2023-08-11 12:32:48 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-11 12:32:48 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field encoder in com.ashmeet.flightreservation.controllers.UserController required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+

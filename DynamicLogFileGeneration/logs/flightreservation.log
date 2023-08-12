@@ -1,0 +1,137 @@
+2023-08-12 14:20:58 - Starting FlightreservationApplication using Java 17.0.7 with PID 82689 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-12 14:20:58 - No active profile set, falling back to 1 default profile: "default"
+2023-08-12 14:20:58 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-12 14:20:58 - Finished Spring Data repository scanning in 7 ms. Found 5 JPA repository interfaces.
+2023-08-12 14:20:58 - Tomcat initialized with port(s): 8080 (http)
+2023-08-12 14:20:58 - Starting service [Tomcat]
+2023-08-12 14:20:58 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12 14:20:58 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-12 14:20:58 - Initializing Spring embedded WebApplicationContext
+2023-08-12 14:20:58 - Root WebApplicationContext: initialization completed in 158 ms
+2023-08-12 14:20:58 - HikariPool-2 - Starting...
+2023-08-12 14:20:58 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3fbe9634
+2023-08-12 14:20:58 - HikariPool-2 - Start completed.
+2023-08-12 14:20:58 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-12 14:20:58 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-12 14:20:58 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-12 14:20:58 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-12 14:20:58 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-12 14:20:58 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-12 14:20:58 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-12 14:20:58 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-12 14:20:58 - LiveReload server is running on port 35729
+2023-08-12 14:20:58 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-12 14:20:58 - Started FlightreservationApplication in 0.423 seconds (process running for 1105.775)
+2023-08-12 14:20:58 - Condition evaluation unchanged
+2023-08-12 14:21:28 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-12 14:21:28 - Initializing Servlet 'dispatcherServlet'
+2023-08-12 14:21:28 - Completed initialization in 2 ms
+2023-08-12 14:21:31 - inside showRegistrationPage()
+2023-08-12 14:21:45 - inside register()User [id=null, firstName=Jasleen, lastName=Kaur, email=jasleenkaurbatra@yahoo.co.in, password=test, roles=null]
+2023-08-12 14:21:51 - inside login() and the email is: jasleenkaurbatra@yahoo.co.in
+2023-08-12 14:21:58 - inside findFlights() From: AUSTo: Departure Date: Mon Feb 05 00:00:00 IST 2018
+2023-08-12 14:21:58 - Flights found are: []
+2023-08-12 14:22:05 - inside findFlights() From: NYCTo: Departure Date: Mon Feb 05 00:00:00 IST 2018
+2023-08-12 14:22:06 - Flights found are: [Flight [id=5, flightNumber=UA1, operatingAirlines=United Airlines, departureCity=NYC, arrivalCity=DAL, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 10:14:07.0], Flight [id=6, flightNumber=UA1, operatingAirlines=United Airlines, departureCity=NYC, arrivalCity=DAL, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 10:14:07.0]]
+2023-08-12 14:22:07 - inside showCompleteReservation() with flightId: 5
+2023-08-12 14:22:07 - flight is: Flight [id=5, flightNumber=UA1, operatingAirlines=United Airlines, departureCity=NYC, arrivalCity=DAL, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 10:14:07.0]
+2023-08-12 14:22:23 - inside completeReservation() ReservationRequest [flightId=5, passengerFirstName=Jasleen, passengerLastName=Kaur, passengerEmail=batrapritpalsingh@gmail.com, passengerPhone=09540919888, nameOnTheCard=VISA, CardNumber=1, expirationDate=2, securityCode=3]
+2023-08-12 14:22:23 - inside bookFlight()
+2023-08-12 14:22:23 - Fetching flight for flight id: 5
+2023-08-12 14:22:23 - Saving the passenger: Passenger [id=null, firstName=Jasleen, lastName=Kaur, middleName=null, email=batrapritpalsingh@gmail.com, phone=09540919888]
+2023-08-12 14:22:23 - Saving the reservation: Reservation [id=null, checkedIn=false, numberOfBags=0, passenger=Passenger [id=14, firstName=Jasleen, lastName=Kaur, middleName=null, email=batrapritpalsingh@gmail.com, phone=09540919888], flight=Flight [id=5, flightNumber=UA1, operatingAirlines=United Airlines, departureCity=NYC, arrivalCity=DAL, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 10:14:07.0]]
+2023-08-12 14:22:23 - Generating the itinerary
+2023-08-12 14:22:23 - inside generateItineary()
+2023-08-12 14:25:36 - inside showCompleteReservation() with flightId: 6
+2023-08-12 14:25:36 - flight is: Flight [id=6, flightNumber=UA1, operatingAirlines=United Airlines, departureCity=NYC, arrivalCity=DAL, dateOfDeparture=2018-02-05, estimatedDepartureTime=2018-02-05 10:14:07.0]
+2023-08-12 14:27:23 - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-08-12 14:27:23 - Stopping service [Tomcat]
+2023-08-12 14:27:23 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-12 14:27:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-12 14:27:23 - HikariPool-2 - Shutdown initiated...
+2023-08-12 14:27:23 - HikariPool-2 - Shutdown completed.
+2023-08-12 14:27:23 - Starting FlightreservationApplication using Java 17.0.7 with PID 82689 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-12 14:27:23 - No active profile set, falling back to 1 default profile: "default"
+2023-08-12 14:27:23 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-12 14:27:23 - Finished Spring Data repository scanning in 10 ms. Found 5 JPA repository interfaces.
+2023-08-12 14:27:23 - Tomcat initialized with port(s): 8080 (http)
+2023-08-12 14:27:23 - Starting service [Tomcat]
+2023-08-12 14:27:23 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12 14:27:23 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-12 14:27:23 - Initializing Spring embedded WebApplicationContext
+2023-08-12 14:27:23 - Root WebApplicationContext: initialization completed in 158 ms
+2023-08-12 14:27:24 - HikariPool-3 - Starting...
+2023-08-12 14:27:24 - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@124be3b0
+2023-08-12 14:27:24 - HikariPool-3 - Start completed.
+2023-08-12 14:27:24 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-12 14:27:24 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-12 14:27:24 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-12 14:27:24 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-12 14:27:24 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-12 14:27:24 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-12 14:27:24 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-12 14:27:24 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-12 14:27:24 - LiveReload server is running on port 35729
+2023-08-12 14:27:24 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-12 14:27:24 - Started FlightreservationApplication in 0.375 seconds (process running for 1491.581)
+2023-08-12 14:27:24 - Condition evaluation unchanged
+2023-08-12 14:27:33 - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-08-12 14:27:33 - Stopping service [Tomcat]
+2023-08-12 14:27:33 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-12 14:27:33 - HikariPool-3 - Shutdown initiated...
+2023-08-12 14:27:33 - HikariPool-3 - Shutdown completed.
+2023-08-12 14:27:33 - Starting FlightreservationApplication using Java 17.0.7 with PID 82689 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-12 14:27:33 - No active profile set, falling back to 1 default profile: "default"
+2023-08-12 14:27:33 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-12 14:27:33 - Finished Spring Data repository scanning in 7 ms. Found 5 JPA repository interfaces.
+2023-08-12 14:27:33 - Tomcat initialized with port(s): 8080 (http)
+2023-08-12 14:27:33 - Starting service [Tomcat]
+2023-08-12 14:27:33 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12 14:27:33 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-12 14:27:33 - Initializing Spring embedded WebApplicationContext
+2023-08-12 14:27:33 - Root WebApplicationContext: initialization completed in 127 ms
+2023-08-12 14:27:33 - HikariPool-4 - Starting...
+2023-08-12 14:27:33 - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61b352ac
+2023-08-12 14:27:33 - HikariPool-4 - Start completed.
+2023-08-12 14:27:33 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-12 14:27:33 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-12 14:27:33 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-12 14:27:33 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-12 14:27:33 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-12 14:27:33 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-12 14:27:34 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-12 14:27:34 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-12 14:27:34 - LiveReload server is running on port 35729
+2023-08-12 14:27:34 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-12 14:27:34 - Started FlightreservationApplication in 0.324 seconds (process running for 1501.508)
+2023-08-12 14:27:34 - Condition evaluation unchanged
+2023-08-12 14:27:39 - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-08-12 14:27:39 - Stopping service [Tomcat]
+2023-08-12 14:27:39 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-12 14:27:39 - HikariPool-4 - Shutdown initiated...
+2023-08-12 14:27:39 - HikariPool-4 - Shutdown completed.
+2023-08-12 14:27:39 - Starting FlightreservationApplication using Java 17.0.7 with PID 82689 (/Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation/target/classes started by I534875 in /Users/I534875/Documents/workspace-spring-tool-suite-4-4.19.0.RELEASE/flightreservation)
+2023-08-12 14:27:39 - No active profile set, falling back to 1 default profile: "default"
+2023-08-12 14:27:39 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-12 14:27:39 - Finished Spring Data repository scanning in 7 ms. Found 5 JPA repository interfaces.
+2023-08-12 14:27:39 - Tomcat initialized with port(s): 8080 (http)
+2023-08-12 14:27:39 - Starting service [Tomcat]
+2023-08-12 14:27:39 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12 14:27:39 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-12 14:27:39 - Initializing Spring embedded WebApplicationContext
+2023-08-12 14:27:39 - Root WebApplicationContext: initialization completed in 123 ms
+2023-08-12 14:27:39 - HikariPool-5 - Starting...
+2023-08-12 14:27:39 - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c80a0bb
+2023-08-12 14:27:39 - HikariPool-5 - Start completed.
+2023-08-12 14:27:39 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-12 14:27:39 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-12 14:27:39 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-12 14:27:39 - HHH000021: Bytecode provider name : bytebuddy
+2023-08-12 14:27:39 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-12 14:27:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-12 14:27:39 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-12 14:27:39 - Adding welcome page: ServletContext resource [/index.html]
+2023-08-12 14:27:39 - LiveReload server is running on port 35729
+2023-08-12 14:27:39 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2023-08-12 14:27:39 - Started FlightreservationApplication in 0.31 seconds (process running for 1507.378)
+2023-08-12 14:27:39 - Condition evaluation unchanged
